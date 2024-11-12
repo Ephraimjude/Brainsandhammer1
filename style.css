@@ -131,12 +131,14 @@ body {
 
 .about_frame_nr{
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     right: 0;
     width: 40px;
     height: 40px;
-    background: #4d4b4b;
+    background: #a8a1a1;
 }
 
 .about_frame_icon{
