@@ -16,6 +16,10 @@ body {
     width: 100%;
 }
 
+p{
+    line-height: 1.5;
+}
+
 .container{
     width: 100%;
 }
@@ -91,8 +95,10 @@ body {
 }
 
 .about_text h2{
+    width: 420px;
     font-size: 2.5rem;
     font-family: Arial;
+    padding-bottom: 20px;
 }
 
 .about_main img{
@@ -122,11 +128,11 @@ body {
     position: relative;
     gap: 40px;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px;
     width: 100%;
     height: max-content;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .about_frame_nr{
@@ -171,7 +177,7 @@ body {
 
 .track {
     display: flex;
-    gap: var(--size-4);
+    gap: 4px;
     list-style-type: none;
     margin: 0;
     scroll-snap-type: x mandatory;
@@ -196,3 +202,119 @@ body {
     object-fit: cover;
 }
 
+/*choose section*/
+.choose_container{
+    padding: 10px;
+}
+.choose_main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.choose_intro{
+    width: 500px;
+}
+
+.choose_affordable_container{
+    display: grid;
+}
+
+.choose_affordable{
+    display: grid;
+    width: 300px;
+}
+
+/*assurance section*/
+.assurance_container{
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.assurance_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: rgb(148, 143, 143);
+}
+
+.assurance_top_lh{
+    width: 700px;
+}
+
+.assurance_top_rh{
+    width: 650px;
+    color: #fff;
+}
+
+.assurance_top_lh h2{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.assurance_middle{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: auto;
+}
+
+.assurance_middle_lh{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    width: 650px;
+    height: 700px;
+    background-color: aqua;
+    padding: 50px;
+    left: 15.7%;
+    z-index: 1;
+}
+
+.assurance_middle_lh_head h2{
+    font-size: 2rem;
+    width: 500px;
+    padding-bottom: 50px;
+    font-weight: 900;
+}
+
+.assurance_middle_video_downloadable{
+    width: 750px;
+    position: relative;
+    left: 40%;
+    z-index: 0;
+    right: 0;
+}
+
+.assurance_middle_lh_body{
+    width: 450px;
+    font-size: 1.2rem;
+}
+
+.assurance_middle_lh_body p {
+    line-height: 1.5;
+}
+
+.assurance_middle_button{
+    padding-top: 50px;
+}
+
+.assurance_middle_lh_body button{
+    padding: 20px;
+    background-color: aqua;
+}
+
+.assurance_bottom_main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 200px;
+}
+
+.finished_homes{
+    background-color: #333;
+    padding: 83px;
+    color: #f5f5f5;
+}
