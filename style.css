@@ -203,26 +203,45 @@ p{
 }
 
 /*choose section*/
-.choose_container{
-    padding: 10px;
+.choose_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: wide left and narrow right */
+    gap: 20px; /* Space between the two columns */
+    width: 100%;
 }
-.choose_main{
+
+.choose_main {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    padding: 20px;
 }
 
-.choose_intro{
-    width: 500px;
+.choose_grid {
+    grid-column: 2; /* Place in the second column */
+    grid-row: 1; /* Align it vertically with choose_main */
+    background: #ffffff; /* Optional: add background for clarity */
+    padding: 20px;
 }
 
-.choose_affordable_container{
+.choose_intro {
+    margin-bottom: 20px; /* Space below the intro section */
+}
+
+.choose_affordable_container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the items */
+    gap: 20px; /* Space between items */
 }
 
-.choose_affordable{
-    display: grid;
-    width: 300px;
+.choose_affordable {
+    background: #ececec; /* Optional: card background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /*assurance section*/
