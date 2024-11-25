@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('.img_slider_box_container');
+const slide = document.querySelectorAll('.img_slider_box_container');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
@@ -71,3 +71,28 @@ slides.forEach(slide => {
 });
 
 updateSlider();
+
+const slides = document.querySelectorAll('.project_slide_img img');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function updateSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.project_slide').style.transform = `translateX(-${index * slideWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide(currentIndex);
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlide(currentIndex);
+    });
+});
+
+setInterval(autoSlide, 3000); // Adjust the interval time as needed
