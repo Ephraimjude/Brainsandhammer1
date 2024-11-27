@@ -384,24 +384,18 @@ p{
 
 .project_slide{
     padding-top: 100px;
-    display: flex;
 }
 
 .project_slide_img{
     display: flex;
-    animation: slide 10s infinite;
-    position: relative;
+    transition: transform 0.4s ease-out;
     width: 100%;
+    gap: 10px;
 }
 
 .project_slide_img img{
     height: 300px;
     width: 600px;
-}
-
-.project_slide_img{
-    display: flex;
-    gap: 10px;
 }
 
 .dots {
