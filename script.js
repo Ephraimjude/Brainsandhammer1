@@ -78,3 +78,49 @@ slideContainer.insertBefore(lastImageClone, images[0]);
 
 updateImage();
 startSlideshow();
+
+
+//form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const successMessage = document.getElementById('successMessage');
+
+    // Email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Phone validation regex (basic format: 10-15 digits)
+    const phoneRegex = /^[0-9]{10,15}$/;
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Clear previous messages
+        emailError.style.display = 'none';
+        phoneError.style.display = 'none';
+        successMessage.style.display = 'none';
+
+        let valid = true;
+
+        // Validate email
+        if (!emailRegex.test(emailInput.value.trim())) {
+            emailError.style.display = 'block';
+            valid = false;
+        }
+
+        // Validate phone
+        if (!phoneRegex.test(phoneInput.value.trim())) {
+            phoneError.style.display = 'block';
+            valid = false;
+        }
+
+        // Show success message if valid
+        if (valid) {
+            successMessage.style.display = 'block';
+            contactForm.reset(); // Reset form fields
+        }
+    });
+});

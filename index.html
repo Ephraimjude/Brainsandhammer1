@@ -408,7 +408,7 @@
                 </div>
             </div>
         </div>
-        <!-----------------Project launch section-->
+        <!-----------------Project launch section--------->
         <div class="project_container" id="slider">
             <div class="project_main">
                 <div class="project">
@@ -450,7 +450,27 @@
                     </div>
                 </div>
             </div>
-        </div>            
+        </div>     
+        
+        <!-----------------Footer Form-------------------->
+        <div class="form-container">
+            <form id="contactForm">
+                <h2>Contact Us</h2>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <small class="error-message" id="emailError">Invalid email format</small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    <small class="error-message" id="phoneError">Invalid phone number</small>
+                </div>
+                <button type="submit" id="submitButton">Submit</button>
+                <div class="success-message" id="successMessage">Form submitted successfully!</div>
+            </form>
+        </div>
+    
         
     </div>
         <script src="script.js"></script>
